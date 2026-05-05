@@ -3,6 +3,11 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  color: white;
+  background: radial-gradient(circle at 20% 30%, #1e293b, transparent),
+              radial-gradient(circle at 80% 70%, #0f172a, transparent),
+              #020617;
+  overflow-x: hidden;
 }
 
 .hero {
