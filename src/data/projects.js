@@ -11,12 +11,12 @@ export const projects = [
     description:
       "ConfigMap helps support teams visualize relationships between triggers, automations, SLA policies, and workflows to simplify administration and reduce operational confusion.",
 
-    video: "/videos/ConfigMap-v1.4.0.mp4",
+    video: "public/videos/ConfigMap-v1.4.0.mp4",
 
     screenshots: [
-      "/images/cm-screenshot-0.png",
-      "/images/cm-screenshot-1.png",
-      "/images/cm-screenshot-2.png",
+      "public/images/cm-screenshot-0.png",
+      "public/images/cm-screenshot-1.png",
+      "public/images/cm-screenshot-2.png",
     ],
 
     features: [
@@ -44,12 +44,12 @@ export const projects = [
     description:
       "Conversation Analysis provides visibility into support interactions, trends, operational bottlenecks, and customer communication patterns.",
 
-    video: "/videos/Ticket-Conversation-Analysis-v1.1.mp4",
+    video: "public/videos/Ticket-Conversation-Analysis-v1.1.mp4",
 
     screenshots: [
-      "/images/tca-screenshot-0.png",
-      "/images/tca-screenshot-1.png",
-      "/images/tca-screenshot-2.png",
+      "public/images/tca-screenshot-0.png",
+      "public/images/tca-screenshot-1.png",
+      "public/images/tca-screenshot-2.png",
     ],
 
     features: [
