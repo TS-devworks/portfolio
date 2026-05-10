@@ -29,7 +29,7 @@ export const projects = [
     pricing: {
       current: "$49.99/month",
       future:
-        "Early adopter pricing available through August 2026 or first 250 installs.",
+        "Early adopter pricing available through August 2026 or first 250 installs. $149.99/month thereafter.",
     },
   },
 
@@ -62,7 +62,7 @@ export const projects = [
     pricing: {
       current: "$109.99/month",
       future:
-        "Early adopter pricing available through August 2026 or first 250 installs.",
+        "Early adopter pricing available through August 2026 or first 250 installs. $249.99/month thereafter.",
     },
   },
 ];
