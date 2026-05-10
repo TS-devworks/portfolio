@@ -75,6 +75,23 @@
   line-height: 1.7;
 }
 
+.section-heading {
+  margin-bottom: 48px;
+  max-width: 700px;
+}
+
+.section-eyebrow {
+  margin-bottom: 16px;
+
+  color: var(--pastel-blue);
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+
+  font-size: 0.8rem;
+}
+
 .section-heading h2 {
   margin: 0;
   font-size: clamp(2rem, 3vw, 3rem);
@@ -126,15 +143,68 @@
   transform: translateY(0);
 }
 
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .project-card.reverse {
-  direction: rtl;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-card.reverse .project-media {
+  order: 1;
 }
 
 .project-card.reverse .project-details {
-  text-align: right;
+  order: 2;
 }
 
 .project-media video {
   width: 100%;
   border-radius: 18px;
 }
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 28px;
+}
+
+.about-card {
+  padding:
+    clamp(28px, 4vw, 42px);
+
+  border-radius: var(--radius-lg);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.03)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow: var(--shadow-soft);
+}
+
+.about-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 1.4rem;
+}
+
+.about-card p {
+  color: var(--text-secondary);
+
+  line-height: 1.8;
+}
+
