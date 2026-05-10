@@ -1,60 +1,105 @@
 import { useEffect, useRef, useState } from "react";
-import { projects } from "../../data/projects";
-import SectionHeading from "../layout/SectionHeading";
 
-export default function ProjectSection() {
-  const refs = useRef([]);
-  const [visible, setVisible] = useState([]);
+import ScreenshotCarousel
+  from "../ui/ScreenshotCarousel";
+
+export default function ProjectSection({
+  project,
+  reverse,
+}) {
+  const ref = useRef();
+
+  const [visible, setVisible] =
+    useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = refs.current.indexOf(entry.target);
-          if (entry.isIntersecting && index !== -1) {
-            setVisible((current) => {
-              const next = [...current];
-              next[index] = true;
-              return next;
-            });
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+    const observer =
+      new IntersectionObserver(
+        ([entry]) => {
+          setVisible(entry.isIntersecting);
+        },
+        {
+          threshold: 0.25,
+        }
+      );
 
-    refs.current.forEach((element) => {
-      if (element) observer.observe(element);
-    });
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="projects" className="projects-section">
-      <SectionHeading
-        title="Featured projects"
-        subtitle="Selected work across Zendesk tooling and analytics experiences."
-      />
+    <section
+      ref={ref}
+      className={`
+        project-card
+        ${visible ? "show" : ""}
+        ${reverse ? "reverse" : ""}
+      `}
+    >
 
-      {projects.map((project, index) => (
-        <div
-          key={project.title}
-          ref={(el) => (refs.current[index] = el)}
-          className={`project-card ${visible[index] ? "show" : ""} ${
-            index % 2 ? "reverse" : ""
-          }`}
-        >
-          <div className="project-details">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-          </div>
+      <div className="project-details">
 
-          <div className="project-media">
-            <video autoPlay muted loop playsInline src={project.media} />
-          </div>
+        <p className="project-tag">
+          Featured Project
+        </p>
+
+        <h2>{project.title}</h2>
+
+        <p className="project-subtitle">
+          {project.subtitle}
+        </p>
+
+        <p className="project-description">
+          {project.description}
+        </p>
+
+        <div className="feature-pills">
+
+          {project.features.map((feature) => (
+            <span
+              key={feature}
+              className="feature-pill"
+            >
+              {feature}
+            </span>
+          ))}
+
         </div>
-      ))}
+
+        <div className="pricing-box">
+
+          <h3>
+            {project.pricing.current}
+          </h3>
+
+          <p>
+            {project.pricing.future}
+          </p>
+
+        </div>
+
+      </div>
+
+      <div className="project-media">
+
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          src={project.video}
+        />
+
+        <ScreenshotCarousel
+          screenshots={project.screenshots}
+        />
+
+      </div>
+
     </section>
   );
 }
