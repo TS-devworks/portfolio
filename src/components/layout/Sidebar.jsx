@@ -1,15 +1,14 @@
-function Sidebar() {
+export default function Sidebar() {
   return (
     <aside className="sidebar">
-      <div className="brand">T. Smith</div>
-      <nav>
-        <a href="#hero">Home</a>
+      <div className="sidebar-inner">
+
+        <a href="#hero">Hero</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#faq">FAQ</a>
-      </nav>
+
+      </div>
     </aside>
   );
 }
-
-export default Sidebar;

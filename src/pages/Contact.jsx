@@ -1,10 +1,7 @@
-function Contact() {
+export default function Contact() {
   return (
-    <section className="contact-page">
+    <div>
       <h1>Contact</h1>
-      <p>Get in touch to learn more about partnerships, collaboration, and project work.</p>
-    </section>
+    </div>
   );
 }
-
-export default Contact;

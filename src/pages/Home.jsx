@@ -1,27 +1,32 @@
 import Sidebar from "../components/layout/Sidebar";
-import Footer from "../components/layout/Footer";
-import HeroSection from "../components/sections/HeroSection";
-import WhyChooseSection from "../components/sections/WhyChooseSection";
-import AboutSection from "../components/sections/AboutSection";
-import ProjectSection from "../components/sections/ProjectSection";
-import FAQSection from "../components/sections/FAQSection";
-import PricingSection from "../components/sections/PricingSection";
+import TopProgressBar from "../components/layout/TopProgressBar";
 
-function Home() {
+export default function Home() {
   return (
-    <div className="app-shell">
+    <>
+      <TopProgressBar />
+
       <Sidebar />
-      <main className="page-content">
-        <HeroSection />
-        <WhyChooseSection />
-        <AboutSection />
-        <ProjectSection />
-        <FAQSection />
-        <PricingSection />
+
+      <main className="main-content">
+
+        <section id="hero">
+          <h1>JDevSolutions</h1>
+        </section>
+
+        <section id="about">
+          <h2>About</h2>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+        </section>
+
+        <section id="faq">
+          <h2>FAQ</h2>
+        </section>
+
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }
-
-export default Home;
