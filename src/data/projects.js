@@ -1,3 +1,4 @@
+const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 // src/data/projects.js
 export const projects = [
   {
@@ -11,13 +12,13 @@ export const projects = [
     description:
       "ConfigMap helps support teams visualize relationships between triggers, automations, SLA policies, and workflows to simplify administration and reduce operational confusion.",
 
-    video: "public/videos/ConfigMap-v1.4.0.mp4",
+    video: asset("videos/ConfigMap-v1.4.0.mp4"),
 
     screenshots: [
-      "public/images/cm-screenshot-0.png",
-      "public/images/cm-screenshot-1.png",
-      "public/images/cm-screenshot-2.png",
-    ],
+      asset("images/cm-screenshot-0.png"),
+      asset("images/cm-screenshot-1.png"),
+      asset("images/cm-screenshot-2.png"),
+],
 
     features: [
       "Trigger relationship mapping",
@@ -44,12 +45,12 @@ export const projects = [
     description:
       "Conversation Analysis provides visibility into support interactions, trends, operational bottlenecks, and customer communication patterns.",
 
-    video: "public/videos/Ticket-Conversation-Analysis-v1.1.mp4",
+    video: asset("videos/Ticket-Conversation-Analysis-v1.1.mp4"),
 
     screenshots: [
-      "public/images/tca-screenshot-0.png",
-      "public/images/tca-screenshot-1.png",
-      "public/images/tca-screenshot-2.png",
+      asset("images/tca-screenshot-0.png"),
+      asset("images/tca-screenshot-1.png"),
+      asset("images/tca-screenshot-2.png"),
     ],
 
     features: [

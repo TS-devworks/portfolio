@@ -145,10 +145,10 @@
 
   transition:
     opacity 1s ease,
-    transform 1s ease,
-    filter 1s ease;
+    transform 1s ease;
 
-  filter: blur(10px);
+  overflow: hidden;
+
 }
 
 .project-card.show {
@@ -158,7 +158,6 @@
     translateY(0)
     scale(1);
 
-  filter: blur(0);
 }
 
 .project-card.reverse
@@ -254,14 +253,23 @@
 /* MEDIA */
 
 .project-media {
+  width: 100%;
   display: flex;
   flex-direction: column;
 
   gap: 24px;
+
+  transform: translateZ(0);
 }
 
 .project-media video {
   width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  display: block;
 
   border-radius: var(--radius-lg);
 
