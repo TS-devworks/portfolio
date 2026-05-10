@@ -44,7 +44,7 @@ export const projects = [
     description:
       "Conversation Analysis provides visibility into support interactions, trends, operational bottlenecks, and customer communication patterns.",
 
-    video: "/videos/Ticket-Conversation-Analysis.mp4",
+    video: "/videos/Ticket-Conversation-Analysis-v1.1.mp4",
 
     screenshots: [
       "/images/tca-screenshot-0.png",

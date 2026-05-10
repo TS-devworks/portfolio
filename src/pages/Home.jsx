@@ -23,7 +23,7 @@ export default function Home() {
             key={project.id}
             project={project}
             reverse={index % 2 !== 0}
-            />
+          />
         ))} 
 
       </main>
