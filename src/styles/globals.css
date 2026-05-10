@@ -1,0 +1,39 @@
+@import "./layout.css";
+@import "./sections.css";
+@import "./animations.css";
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 30%, #1e293b, transparent),
+    radial-gradient(circle at 80% 70%, #0f172a, transparent),
+    #020617;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}

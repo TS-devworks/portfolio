@@ -1,0 +1,40 @@
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 32px;
+  background: rgba(15, 23, 42, 0.95);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar .brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 14px;
+}
+
+.sidebar a {
+  color: #cbd5e1;
+}
+
+.page-content {
+  padding: 48px 56px;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  padding: 24px 56px;
+  color: #94a3b8;
+}

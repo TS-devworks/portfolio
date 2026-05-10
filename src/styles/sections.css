@@ -1,0 +1,80 @@
+.hero-section,
+.why-choose-section,
+.about-section,
+.projects-section,
+.faq-section,
+.pricing-section {
+  margin-bottom: 64px;
+}
+
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.section-heading p {
+  margin: 8px 0 0;
+  color: #94a3b8;
+}
+
+.feature-grid,
+.pricing-grid,
+.faq-list {
+  display: grid;
+  gap: 20px;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+.pricing-card,
+.faq-item,
+.feature-grid article {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.85);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card.reverse {
+  direction: rtl;
+}
+
+.project-card.reverse .project-details {
+  text-align: right;
+}
+
+.project-media video {
+  width: 100%;
+  border-radius: 18px;
+}
