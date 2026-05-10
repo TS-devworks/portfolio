@@ -1,5 +1,6 @@
 import Sidebar from "../components/layout/Sidebar";
 import TopProgressBar from "../components/layout/TopProgressBar";
+import HeroSection from "../components/sections/HeroSection";
 
 export default function Home() {
   return (
@@ -10,10 +11,7 @@ export default function Home() {
 
       <main className="main-content">
 
-        <section id="hero">
-          <h1>JDevSolutions</h1>
-        </section>
-
+        <HeroSection />
         <section id="about">
           <h2>About</h2>
         </section>

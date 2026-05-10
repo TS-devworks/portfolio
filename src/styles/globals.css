@@ -1,39 +1,88 @@
-@import "./layout.css";
-@import "./sections.css";
-@import "./animations.css";
-
 :root {
-  color-scheme: dark;
-  font-family: Inter, system-ui, sans-serif;
-  background-color: #020617;
-  color: #f8fafc;
+
+  /* COLORS */
+
+  --bg-dark: #0f172a;
+
+  --pastel-purple: #d8b4fe;
+  --pastel-blue: #93c5fd;
+  --pastel-pink: #f9a8d4;
+  --pastel-peach: #fdba74;
+  --pastel-mint: #86efac;
+
+  --text-primary: #f8fafc;
+  --text-secondary: rgba(248, 250, 252, 0.72);
+
+  /* SURFACES */
+
+  --glass-bg: rgba(255,255,255,0.06);
+
+  --glass-border: rgba(255,255,255,0.08);
+
+  /* RADIUS */
+
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+
+  /* SHADOWS */
+
+  --shadow-soft:
+    0 10px 40px rgba(0,0,0,0.18);
+
+  --shadow-large:
+    0 30px 80px rgba(0,0,0,0.28);
+
+  /* SPACING */
+
+  --section-padding:
+    clamp(80px, 12vw, 160px);
+
+  /* TYPOGRAPHY */
+
+  --heading-xl:
+    clamp(3rem, 7vw, 6rem);
+
+  --heading-lg:
+    clamp(2rem, 5vw, 4rem);
+
+  --body-lg:
+    clamp(1rem, 1.5vw, 1.15rem);
 }
 
 * {
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-  min-height: 100%;
-  margin: 0;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background: radial-gradient(circle at 20% 30%, #1e293b, transparent),
-    radial-gradient(circle at 80% 70%, #0f172a, transparent),
-    #020617;
+
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      #0f172a,
+      #111827,
+      #1e1b4b
+    );
+
+  color: var(--text-primary);
+
+  overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+section {
+  position: relative;
 
-img,
-video {
-  max-width: 100%;
-  display: block;
+  padding:
+    var(--section-padding)
+    clamp(24px, 5vw, 80px);
 }

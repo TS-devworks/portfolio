@@ -1,18 +1,24 @@
-import SectionHeading from "../layout/SectionHeading";
-
-function HeroSection() {
+export default function HeroSection() {
   return (
     <section id="hero" className="hero-section">
-      <SectionHeading
-        title="Support Ops. Zendesk. Data Tools."
-        subtitle="Building workflow and analytics experiences for modern service teams."
-      />
-      <p>
-        I create intuitive tooling and portfolio experiences that help teams
-        move faster while staying focused on customer success.
-      </p>
+
+      <div className="hero-block">
+
+        <p className="hero-tag">
+          Zendesk Applications • Solutions • Tools
+        </p>
+
+        <h1>
+          JDevSolutions
+        </h1>
+
+        <p className="hero-subtitle">
+          Cinematic SaaS tools and Zendesk solutions
+          focused on visibility, automation, and operational clarity.
+        </p>
+
+      </div>
+
     </section>
   );
 }
-
-export default HeroSection;
