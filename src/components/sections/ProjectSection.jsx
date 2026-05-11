@@ -19,7 +19,8 @@ export default function ProjectSection({
           setVisible(entry.isIntersecting);
         },
         {
-          threshold: 0.35,
+          threshold: 0.8,
+          rootMargin: "-5% 0px -20% 0px",
         }
       );
 

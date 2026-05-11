@@ -1,16 +1,16 @@
-import Sidebar from "../components/layout/Sidebar";
 import TopProgressBar from "../components/layout/TopProgressBar";
 import HeroSection from "../components/sections/HeroSection";
 import AboutSection from "../components/sections/AboutSection";
 import ProjectSection from "../components/sections/ProjectSection";
 import { projects } from "../data/projects";
+import FloatingNav from "../components/layout/FloatingNav";
 
 export default function Home() {
   return (
     <>
       <TopProgressBar />
 
-      <Sidebar />
+      <FloatingNav />
 
       <main className="main-content">
 
