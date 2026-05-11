@@ -67,15 +67,15 @@ body {
     sans-serif;
 
   background:
-    linear-gradient(
-      180deg,
-      #0f172a,
-      #111827,
-      #1e1b4b
-    );
+    radial-gradient(circle at 15% 10%, rgba(216,180,254,0.22), transparent 34%),
+    radial-gradient(circle at 85% 25%, rgba(147,197,253,0.18), transparent 36%),
+    radial-gradient(circle at 20% 70%, rgba(249,168,212,0.14), transparent 38%),
+    radial-gradient(circle at 85% 85%, rgba(134,239,172,0.12), transparent 34%),
+    linear-gradient(180deg, #0f172a 0%, #111827 45%, #1e1b4b 100%);
+
+  background-attachment: fixed;
 
   color: var(--text-primary);
-
   overflow-x: hidden;
 }
 

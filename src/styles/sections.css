@@ -287,39 +287,67 @@
 .carousel {
   display: flex;
   flex-direction: column;
-
   gap: 18px;
 }
 
 .carousel-image {
   width: 100%;
+  aspect-ratio: 16 / 9;
 
-  border-radius: var(--radius-lg);
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 28px;
+
+  box-shadow: var(--shadow-large);
 
   transition:
-    transform 0.4s ease;
+    opacity 0.5s ease,
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
 .carousel-image:hover {
-  transform: scale(1.02);
+  transform: scale(1.025);
+}
+
+.carousel-image {
+  animation:
+    subtleFloat 8s ease-in-out infinite;
+}
+
+@keyframes subtleFloat {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
 }
 
 .carousel-thumbnails {
   display: flex;
-
   gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
 }
 
 .carousel-thumb {
   border: none;
-
-  background: none;
-
+  background: transparent;
   padding: 0;
-
   cursor: pointer;
+  opacity: 0.55;
 
-  opacity: 0.6;
+  border-radius: 16px;
 
   transition:
     opacity 0.3s ease,
@@ -330,16 +358,20 @@
 .carousel-thumb:hover {
   opacity: 1;
 
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 18px rgba(147,197,253,0.28);
 }
 
 .carousel-thumb img {
-  width: 80px;
-  height: 60px;
-
+  width: 84px;
+  height: 62px;
   object-fit: cover;
+  display: block;
 
-  border-radius: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
 /* MOBILE */
@@ -417,12 +449,22 @@
 
 .project-card:nth-of-type(odd) {
   background:
-    linear-gradient(135deg, rgba(216,180,254,0.12), rgba(147,197,253,0.08));
+    linear-gradient(
+      135deg,
+      rgba(216,180,254,0.14),
+      rgba(147,197,253,0.08),
+      rgba(255,255,255,0.03)
+    );
 }
 
 .project-card:nth-of-type(even) {
   background:
-    linear-gradient(135deg, rgba(253,186,116,0.12), rgba(134,239,172,0.08));
+    linear-gradient(
+      135deg,
+      rgba(253,186,116,0.12),
+      rgba(134,239,172,0.08),
+      rgba(255,255,255,0.03)
+    );
 }
 
 .project-media video,

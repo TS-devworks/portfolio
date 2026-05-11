@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ScreenshotCarousel({
   screenshots,
@@ -6,8 +6,29 @@ export default function ScreenshotCarousel({
   const [activeIndex, setActiveIndex] =
     useState(0);
 
+  const [paused, setPaused] =
+    useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prev) =>
+        prev === screenshots.length - 1
+          ? 0
+          : prev + 1
+      );
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [paused, screenshots.length]);
+
   return (
-    <div className="carousel">
+    <div
+      className="carousel"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
 
       <img
         src={screenshots[activeIndex]}
@@ -34,6 +55,7 @@ export default function ScreenshotCarousel({
         ))}
 
       </div>
+
     </div>
   );
 }
