@@ -86,3 +86,50 @@ section {
     var(--section-padding)
     clamp(24px, 5vw, 80px);
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(216,180,254,0.22), transparent 32%),
+    radial-gradient(circle at 80% 30%, rgba(147,197,253,0.18), transparent 36%),
+    radial-gradient(circle at 30% 80%, rgba(249,168,212,0.14), transparent 38%),
+    radial-gradient(circle at 85% 85%, rgba(134,239,172,0.12), transparent 34%);
+}
+
+.ambient-glow {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(80px);
+  opacity: 0.28;
+  z-index: -1;
+}
+
+.ambient-glow-one {
+  width: 320px;
+  height: 320px;
+  top: 12%;
+  left: 8%;
+  background: var(--pastel-purple);
+}
+
+.ambient-glow-two {
+  width: 360px;
+  height: 360px;
+  top: 42%;
+  right: 8%;
+  background: var(--pastel-blue);
+}
+
+.ambient-glow-three {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  left: 35%;
+  background: var(--pastel-pink);
+}

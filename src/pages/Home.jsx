@@ -13,7 +13,9 @@ export default function Home() {
       <FloatingNav />
 
       <main className="main-content">
-
+        <div className="ambient-glow ambient-glow-one" />
+        <div className="ambient-glow ambient-glow-two" />
+        <div className="ambient-glow ambient-glow-three" />
         <HeroSection />
 
         <AboutSection />       
