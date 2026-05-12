@@ -130,6 +130,19 @@ body {
   transform: translateY(-1px);
 }
 
+.floating-nav a.active {
+  opacity: 1;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(216,180,254,0.22),
+      rgba(147,197,253,0.16)
+    );
+
+  box-shadow:
+    0 0 24px rgba(147,197,253,0.18);
+}
+
 @media (max-width: 768px) {
   .floating-nav {
     top: auto;

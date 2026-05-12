@@ -25,13 +25,15 @@ export default function Home() {
 
         <AboutSection />       
 
-        {projects.map((project, index) => (
-          <ProjectSection
-            key={project.id}
-            project={project}
-            reverse={index % 2 !== 0}
-          />
-        ))} 
+        <section id="projects" className="projects-section">
+          {projects.map((project, index) => (
+            <ProjectSection
+              key={project.id}
+              project={project}
+              reverse={index % 2 !== 0}
+            />
+          ))}
+        </section>
         <FAQSection />
 
         <Footer />

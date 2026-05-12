@@ -43,21 +43,23 @@ export default function ProjectSection({
 
       <div className="project-details">
 
-        <p className="project-tag">
+        <p className="project-tag reveal-child">
           Featured Project
         </p>
 
-        <h2>{project.title}</h2>
+        <h2 className="reveal-child">
+          {project.title}
+        </h2>
 
-        <p className="project-subtitle">
+        <p className="project-subtitle reveal-child">
           {project.subtitle}
         </p>
 
-        <p className="project-description">
+        <p className="project-description reveal-child">
           {project.description}
         </p>
 
-        <div className="feature-pills">
+        <div className="feature-pills reveal-child">
 
           {project.features.map((feature) => (
             <span
@@ -70,7 +72,7 @@ export default function ProjectSection({
 
         </div>
 
-        <div className="pricing-box">
+        <div className="pricing-box reveal-child">
 
           <h3>
             {project.pricing.current}
