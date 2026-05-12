@@ -1,9 +1,28 @@
-function Footer() {
+export default function Footer() {
   return (
     <footer className="footer">
-      <p>© 2026 T. Smith. Designed for modern support ops and data tools.</p>
+
+      <div className="footer-links">
+
+        <a href="#">
+          Privacy Notice<br />
+        </a>
+
+        <a href="https://github.com/TS-devworks/ConfigMap/blob/main/TermsConditions.md">
+          Terms & Conditions<br />
+        </a>
+
+        <a href="#contact">
+          Contact Us
+        </a>
+
+      </div>
+
+      <p>
+        © 2026 JDevSolutions.
+        All rights reserved.
+      </p>
+
     </footer>
   );
 }
-
-export default Footer;

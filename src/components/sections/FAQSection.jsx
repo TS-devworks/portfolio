@@ -1,23 +1,66 @@
-import SectionHeading from "../layout/SectionHeading";
-import { faq } from "../../data/faq";
+import SectionHeading
+  from "../layout/SectionHeading";
 
-function FAQSection() {
+const faqs = [
+  {
+    question:
+      "How are the Zendesk apps installed?",
+
+    answer:
+      "Applications are installed directly through the Zendesk marketplace or private installation links.",
+  },
+
+  {
+    question:
+      "Are the applications compatible with all Zendesk plans?",
+
+    answer:
+      "Compatibility depends on the specific Zendesk features required by each application.",
+  },
+
+  {
+    question:
+      "Can features be requested?",
+
+    answer:
+      "Yes. Feedback, feature requests, and operational suggestions are encouraged.",
+  },
+
+  {
+    question:
+      "Are there known limitations?",
+
+    answer:
+      "Some applications depend on Zendesk APIs and platform limitations which may affect visibility or performance.",
+  },
+];
+
+export default function FAQSection() {
   return (
-    <section id="faq" className="faq-section">
+    <section
+      id="faq"
+      className="faq-section"
+    >
       <SectionHeading
-        title="Frequently asked questions"
-        subtitle="Answers to the most common project and collaboration questions."
+        eyebrow="FAQ"
+        title="Frequently Asked Questions"
+        subtitle="Answers to common installation, compatibility, and support questions."
       />
+
       <div className="faq-list">
-        {faq.map((item, index) => (
-          <div key={index} className="faq-item">
-            <h3>{item.question}</h3>
-            <p>{item.answer}</p>
-          </div>
+
+        {faqs.map((faq) => (
+          <article
+            key={faq.question}
+            className="faq-item"
+          >
+            <h3>{faq.question}</h3>
+
+            <p>{faq.answer}</p>
+          </article>
         ))}
+
       </div>
     </section>
   );
 }
-
-export default FAQSection;

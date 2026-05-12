@@ -4,7 +4,12 @@ import AboutSection from "../components/sections/AboutSection";
 import ProjectSection from "../components/sections/ProjectSection";
 import { projects } from "../data/projects";
 import FloatingNav from "../components/layout/FloatingNav";
+import FAQSection
+  from "../components/sections/FAQSection";
 
+import Footer
+  from "../components/layout/Footer";
+  
 export default function Home() {
   return (
     <>
@@ -27,6 +32,9 @@ export default function Home() {
             reverse={index % 2 !== 0}
           />
         ))} 
+        <FAQSection />
+
+        <Footer />
 
       </main>
     </>
