@@ -126,6 +126,9 @@
 }
 
 .project-card {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
   background:
     radial-gradient(circle at top left, rgba(216,180,254,0.16), transparent 38%),
     radial-gradient(circle at bottom right, rgba(147,197,253,0.12), transparent 42%),
@@ -152,13 +155,10 @@
     opacity 2.2s ease,
     transform 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 
-  overflow: hidden;
+  overflow: visible;
 
-  margin-bottom: clamp(70px, 16vw, 70px);
-
-  position:relative;
-  border-radius: 32px;
-  overflow: hidden;
+  margin-bottom: 25px;
+  margin-top: 5px;
 
 }
 
@@ -315,7 +315,7 @@
 .carousel-image {
   width: 100%;
   aspect-ratio: 4 / 3;
-  height: 355px;
+  height: 300px;
   padding:10px;
   object-fit: cover;
   display: block;
@@ -377,11 +377,11 @@
 .carousel-thumb {
   border: none;
   background: transparent;
-  padding: 0;
+  padding: 5px;
   cursor: pointer;
   opacity: 0.55;
 
-  border-radius: 18px;
+  border-radius: 19px;
   overflow: hidden;
 
   transition:
@@ -396,17 +396,17 @@
   transform: translateY(-3px);
 
   box-shadow:
-    0 0 22px rgba(147,197,253,0.22),
+    0 0 12px rgba(147,197,253,0.22),
     0 0 40px rgba(216,180,254,0.14);
 }
 
 .carousel-thumb img {
   width: 100px;
   aspect-ratio: 16 / 9;
-  height: auto;
+  height: 40px;
   object-fit: cover;
   display: block;
-  border-radius: 16px;
+  border-radius: 14px;
 }
 
 /* MOBILE */
@@ -518,26 +518,6 @@
       rgba(134,239,172,0.08),
       rgba(255,255,255,0.03)
     );
-}
-
-.project-media video {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
-  display: block;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-large);
-}
-
-.carousel-image {
-  width: 100%;
-  height: 335px;
-  padding: 10px;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-large);
 }
 
 .carousel-image:hover,

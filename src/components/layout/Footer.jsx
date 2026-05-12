@@ -12,7 +12,7 @@ export default function Footer() {
           Terms & Conditions<br />
         </a>
 
-        <a href="#contact">
+        <a href="https://forms.gle/g9GuriiSSvQMri6eA">
           Contact Us
         </a>
 
