@@ -13,7 +13,7 @@ export default function HeroSection() {
         </h1>
 
         <p className="hero-subtitle">
-          Cinematic SaaS tools and Zendesk solutions
+          SaaS tools and Zendesk solutions
           focused on visibility, automation, and operational clarity.
         </p>
 

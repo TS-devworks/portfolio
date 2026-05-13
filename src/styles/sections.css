@@ -408,6 +408,21 @@
   border-radius: 14px;
 }
 
+.faq-link {
+  color: var(--pastel-blue);
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+.faq-link:hover {
+  opacity: 0.75;
+}
+
 /* MOBILE */
 
 @media (max-width: 900px) {

@@ -18,13 +18,6 @@ const faqs = [
       "Compatibility depends on the specific Zendesk features required by each application.",
   },
 
-  {
-    question:
-      "Can features be requested?",
-
-    answer:
-      "Yes. Feedback, feature requests, and operational suggestions are encouraged.",
-  },
 
   {
     question:
@@ -33,6 +26,34 @@ const faqs = [
     answer:
       "Some applications depend on Zendesk APIs and platform limitations which may affect visibility or performance.",
   },
+
+  {
+    question:
+      "Can features be requested?",
+
+    answer:
+      "Yes. Feedback, feature requests, and operational suggestions are encouraged. For the aformentioned, please ",
+      
+    linkText:
+      "Contact Us",
+
+    linkHref:
+      "https://forms.gle/iQPZnes4QyyW9Nnr6",
+  },
+
+  {
+  question:
+    "Do you build custom applications?",
+
+  answer:
+    "Yes, I offer custom application development services for businesses with specific needs or requirements. Feel free to ",
+
+  linkText:
+    "Contact Us",
+
+  linkHref:
+    "https://forms.gle/iQPZnes4QyyW9Nnr6",
+},
 ];
 
 export default function FAQSection() {
@@ -56,7 +77,22 @@ export default function FAQSection() {
           >
             <h3>{faq.question}</h3>
 
-            <p>{faq.answer}</p>
+            <p>
+              {faq.answer}
+
+              {faq.linkText && (
+                <>
+                  {" "}
+
+                  <a
+                    href={faq.linkHref}
+                    className="faq-link"
+                  >
+                    {faq.linkText}
+                  </a>
+                </>
+              )}
+            </p>
           </article>
         ))}
 

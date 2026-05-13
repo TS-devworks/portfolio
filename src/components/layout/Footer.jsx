@@ -4,7 +4,7 @@ export default function Footer() {
 
       <div className="footer-links">
 
-        <a href="#">
+        <a href="https://github.com/TS-devworks/ConfigMap/blob/main/PrivacyNotice.md">
           Privacy Notice<br />
         </a>
 
