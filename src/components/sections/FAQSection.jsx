@@ -46,7 +46,7 @@ const faqs = [
     "Do you build custom applications?",
 
   answer:
-    "Yes, I offer custom application development services for businesses with specific needs or requirements. Feel free to ",
+    "Yes. I offer custom application development services for businesses with specific needs or requirements. For the aformentioned, please ",
 
   linkText:
     "Contact Us",
