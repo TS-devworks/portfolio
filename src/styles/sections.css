@@ -426,8 +426,11 @@
 
   .carousel-image {
     aspect-ratio: 4 / 3;
-    max-height: 320px;
-    object-fit: contain;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
     background: rgba(255,255,255,0.035);
   }
 
