@@ -18,9 +18,11 @@ export default function AboutSection() {
           <h3>Why Choose JDevSolutions</h3>
 
           <p>
-            Purpose-built Zendesk applications designed
-            to improve visibility, reduce manual effort,
-            and simplify administration workflows.
+            Focused on creating practical solutions with a strong emphasis on long-term usability, operational insight, 
+            and automation, helping teams work more efficiently without overcomplicating their workflows. 
+            Every solution is designed with scalability, maintainability, and real-world business needs in mind. 
+            The focus is not just on building functional software, but on creating tools that provide lasting value, improve visibility, and simplify day-to-day operations.
+
           </p>
         </div>
 
@@ -28,9 +30,10 @@ export default function AboutSection() {
           <h3>About Me</h3>
 
           <p>
-            I build modern operational tools focused on
-            automation, auditing, and workflow
-            optimization for support environments.
+            I’m passionate about technology, problem-solving, and building tools that create meaningful real-world impact. 
+            My work combines technical development, system design, and operational thinking to create software that is both practical and scalable. 
+            I enjoy exploring new technologies, improving complex workflows, and turning ideas into polished solutions through thoughtful design, automation, and continuous learning.
+
           </p>
         </div>
 
